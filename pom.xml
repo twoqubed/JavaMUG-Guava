@@ -23,7 +23,6 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <fork>true</fork>
-                    <executable>${java-1.6-home}/bin/javac</executable>
                     <source>1.6</source>
                     <target>1.6</target>
                     <debug>true</debug>
