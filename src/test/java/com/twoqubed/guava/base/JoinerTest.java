@@ -15,4 +15,22 @@ public class JoinerTest {
 
         assertEquals("foo|bar", result);
     }
+
+    @Test
+    public void joinsObjects() {
+        String result = Joiner.on(",")
+                .join(new Person("Joe", "Blow"),
+                new Person("Jane", "Doe"));
+
+        assertEquals("Joe Blow,Jane Doe", result);
+    }
+
+    @Test
+    public void appendsJoinedString() {
+        Joiner joiner = Joiner.on(",");
+        StringBuilder builder = new StringBuilder("Numbers: ");
+        joiner.appendTo(builder, 1, 2);
+
+        assertEquals("Numbers: 1,2", builder.toString());
+    }
 }

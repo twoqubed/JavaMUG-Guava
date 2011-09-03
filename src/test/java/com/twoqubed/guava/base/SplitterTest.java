@@ -15,7 +15,8 @@ public class SplitterTest {
 
         Iterable<String> result = splitter.split("foo,bar,,baz");
 
-        assertEquals(newArrayList("foo", "bar", "baz"), newArrayList(result));
+        assertEquals(newArrayList(
+                "foo", "bar", "baz"), newArrayList(result));
     }
 
     @Test

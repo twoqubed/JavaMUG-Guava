@@ -1,6 +1,6 @@
 package com.twoqubed.guava.base;
 
-public abstract class Person {
+public class Person {
 
     final String firstName;
     final String middleName;
@@ -28,4 +28,8 @@ public abstract class Person {
         return lastName;
     }
 
+    @Override
+    public String toString() {
+        return firstName + ' ' + lastName;
+    }
 }
