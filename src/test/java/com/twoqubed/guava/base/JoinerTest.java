@@ -31,6 +31,7 @@ public class JoinerTest {
         StringBuilder builder = new StringBuilder("Numbers: ");
         joiner.appendTo(builder, 1, 2);
 
-        assertEquals("Numbers: 1,2", builder.toString());
+        String result = builder.toString();
+        assertEquals("Numbers: 1,2", result);
     }
 }

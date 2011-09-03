@@ -34,4 +34,19 @@ public class GuavaPerson extends Person {
     public int hashCode() {
         return Objects.hashCode(firstName, middleName, lastName);
     }
+
+
+    @Override
+    public String toString() {
+        return Objects.toStringHelper(this)
+                .add("First Name", firstName)
+                .add("Middle Name", middleName)
+                .add("Last Name", lastName)
+                .toString();
+    }
+
+    public static void main(String[] args) {
+        GuavaPerson person = new GuavaPerson("Joe", "Blow");
+        System.out.println(person);
+    }
 }
