@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class FunctionTest {
 
     @Test
-    public void shouldGiveSkuNumber() {
+    public void shouldReverseString() {
         ReverseFunction function = new ReverseFunction();
 
         String result = function.apply("abc");
