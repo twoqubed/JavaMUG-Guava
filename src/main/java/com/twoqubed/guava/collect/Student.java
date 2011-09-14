@@ -1,9 +1,5 @@
 package com.twoqubed.guava.collect;
 
-import com.google.common.base.CharMatcher;
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
-
 public class Student {
 
     private final Integer id;

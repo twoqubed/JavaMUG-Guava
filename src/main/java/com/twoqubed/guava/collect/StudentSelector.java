@@ -1,17 +1,15 @@
 package com.twoqubed.guava.collect;
 
-import com.google.common.base.CharMatcher;
-
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 
-import static com.google.common.collect.Sets.*;
 import static com.twoqubed.guava.collect.Year.*;
 
 public class StudentSelector {
 
     public Collection<Integer> select(Collection<Student> students) {
-        Set<Integer> selectedIds = newHashSet();
+        Set<Integer> selectedIds = new HashSet<Integer>();
         for (Student each : students) {
             if (each.getYear() == FRESHMAN && lastNameMatches(each)) {
                 selectedIds.add(each.getId());
@@ -21,7 +19,8 @@ public class StudentSelector {
     }
 
     private boolean lastNameMatches(Student each) {
-        return CharMatcher.inRange('A', 'M').apply(each.getLastName().charAt(0));
+        char firstChar = each.getLastName().charAt(0);
+        return firstChar >= 'A' && firstChar <= 'M';
     }
 
 }

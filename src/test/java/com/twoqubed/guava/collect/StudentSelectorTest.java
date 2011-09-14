@@ -4,13 +4,11 @@ import org.junit.Test;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
-import static com.google.common.collect.Iterables.getOnlyElement;
-import static com.google.common.collect.Lists.newArrayList;
-import static com.google.common.collect.Sets.*;
+import static com.google.common.collect.Iterables.*;
+import static com.google.common.collect.Lists.*;
 import static com.twoqubed.guava.collect.Year.*;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class StudentSelectorTest {
 
@@ -19,8 +17,8 @@ public class StudentSelectorTest {
         List<Student> allStudents = newArrayList(
                 new Student(10, "Joe", "Blow", FRESHMAN),
                 new Student(20, "Mary", "Anne", SOPHOMORE),
-                new Student(30, "Jaz", "Zee", FRESHMAN),
-                new Student(40, "Rick", "Perry", SOPHOMORE)
+                new Student(30, "Jaz", "Z", FRESHMAN),
+                new Student(40, "George", "Washington", SOPHOMORE)
         );
 
         StudentSelector selector = new StudentSelector();
